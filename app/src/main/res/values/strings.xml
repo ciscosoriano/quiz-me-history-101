@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Quiz Me - History 101</string>
+    <string name="main_title_quiz_me">QuizMe!</string>
+    <string name="main_title_history_101">History 101</string>
+
+    <string name="begin_label">Begin</string>
+    <string name="start_label">Start Quiz</string>
+    <string name="next_question_label">Next Question</string>
+    <string name="return_home_label">Return Home</string>
+
+    <string name="ask_player_name">Enter your name</string>
+</resources>
