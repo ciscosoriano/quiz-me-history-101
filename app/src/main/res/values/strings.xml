@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Quiz Me - History 101</string>
+    <string name="app_name">QuizMe</string>
     <string name="main_title_quiz_me">QuizMe!</string>
     <string name="main_title_history_101">History 101</string>
 
@@ -9,4 +9,40 @@
     <string name="return_home_label">Return Home</string>
 
     <string name="ask_player_name">Enter your name</string>
+
+    <string name="enter_player_name_warning">Please enter your name</string>
+    <string name="select_answer_warning">Please select an answer</string>
+
+    <string-array name="questions">
+        <item>Who fought in the war of 1812?</item>
+        <item>Which general famously stated 'I shall return'?</item>
+        <item>The first successful printing press was developed by this man</item>
+        <item>Which Roman Emperor build a massive wall across Norther Britain in 122 AD?</item>
+    </string-array>
+
+    <string-array name="question_choices">
+        <item>Andrew Jackson</item>
+        <item>Arthur Wellsley</item>
+        <item>Otto von Bismarck</item>
+        <item>Napoleon</item>
+        <item>Bull Halsey</item>
+        <item>George Patton</item>
+        <item>Douglas MacArthur</item>
+        <item>Omar Bradley</item>
+        <item>Johannes Gutenburg</item>
+        <item>Benjamin Franklin</item>
+        <item>Sir Isaac Newton</item>
+        <item>Martin Luther</item>
+        <item>Marcus Aurelius</item>
+        <item>Hadrian</item>
+        <item>Nero</item>
+        <item>Augustus</item>
+    </string-array>
+
+    <string-array name="correct_answer_keys">
+        <item>Andrew Jackson</item>
+        <item>Douglas MacArthur</item>
+        <item>Johannes Gutenburg</item>
+        <item>Hadrian</item>
+    </string-array>
 </resources>

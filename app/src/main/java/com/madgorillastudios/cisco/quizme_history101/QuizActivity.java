@@ -14,6 +14,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.madgorillastudios.cisco.quizme_history101.data.Constants;
 import com.madgorillastudios.cisco.quizme_history101.data.DbHelper;
 import com.madgorillastudios.cisco.quizme_history101.data.Question;
 
@@ -66,7 +67,7 @@ public class QuizActivity extends AppCompatActivity {
             int rgChoicesId = rgChoices.getCheckedRadioButtonId();
 
             if(rgChoicesId == -1) {
-                Toast toast = Toast.makeText(getApplicationContext(), "Please select an answer", Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(getApplicationContext(), R.string.select_answer_warning, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
                 toast.show();
             } else {
@@ -77,7 +78,7 @@ public class QuizActivity extends AppCompatActivity {
 
                     SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                     SharedPreferences.Editor editor = sharedPref.edit();
-                    editor.putString("quizScore", String.valueOf(mQuizScore));
+                    editor.putString(Constants.QUIZ_SCORE_KEY, String.valueOf(mQuizScore));
                     editor.commit();
 
                     Log.i(TAG, "quizScore Commit Success!");

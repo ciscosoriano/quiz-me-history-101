@@ -1,87 +1,87 @@
 package com.madgorillastudios.cisco.quizme_history101.data;
 
 public class Question {
-    private int questionId;
-    private String question;
-    private String firstChoice;
-    private String secondChoice;
-    private String thirdChoice;
-    private String fourthChoice;
-    private String correctAnswer;
+    private int mQuestionId;
+    private String mQuestion;
+    private String mFirstChoice;
+    private String mSecondChoice;
+    private String mThirdChoice;
+    private String mFourthChoice;
+    private String mCorrectAnswer;
 
     public Question() {
-        questionId = 0;
-        question = "";
-        firstChoice = "";
-        secondChoice = "";
-        thirdChoice = "";
-        fourthChoice = "";
-        correctAnswer = "";
+        mQuestionId = 0;
+        mQuestion = "";
+        mFirstChoice = "";
+        mSecondChoice = "";
+        mThirdChoice = "";
+        mFourthChoice = "";
+        mCorrectAnswer = "";
     }
 
     public Question(String newQuestion, String newFirstChoice, String newSecondChoice,
                     String newThirdChoice, String newFourthChoice, String newCorrectAnswer) {
-        question = newQuestion;
-        firstChoice = newFirstChoice;
-        secondChoice = newSecondChoice;
-        thirdChoice = newThirdChoice;
-        fourthChoice = newFourthChoice;
-        correctAnswer = newCorrectAnswer;
+        mQuestion = newQuestion;
+        mFirstChoice = newFirstChoice;
+        mSecondChoice = newSecondChoice;
+        mThirdChoice = newThirdChoice;
+        mFourthChoice = newFourthChoice;
+        mCorrectAnswer = newCorrectAnswer;
     }
 
     public int getQuestionId() {
-        return questionId;
+        return mQuestionId;
     }
 
     public void setQuestionId(int newQuestionId) {
-        questionId = newQuestionId;
+        mQuestionId = newQuestionId;
     }
 
     public String getQuestion() {
-        return question;
+        return mQuestion;
     }
 
     public void setQuestion(String newQuestion) {
-        question = newQuestion;
+        mQuestion = newQuestion;
     }
 
     public String getFirstChoice() {
-        return firstChoice;
+        return mFirstChoice;
     }
 
     public void setFirstChoice(String newFirstChoice) {
-        firstChoice = newFirstChoice;
+        mFirstChoice = newFirstChoice;
     }
 
     public String getSecondChoice() {
-        return secondChoice;
+        return mSecondChoice;
     }
 
     public void setSecondChoice(String newSecondChoice) {
-        secondChoice = newSecondChoice;
+        mSecondChoice = newSecondChoice;
     }
 
     public String getThirdChoice() {
-        return thirdChoice;
+        return mThirdChoice;
     }
 
     public void setThirdChoice(String newThirdChoice) {
-        thirdChoice = newThirdChoice;
+        mThirdChoice = newThirdChoice;
     }
 
     public String getFourthChoice() {
-        return fourthChoice;
+        return mFourthChoice;
     }
 
     public void setFourthChoice(String newFourthChoice) {
-        fourthChoice = newFourthChoice;
+        mFourthChoice = newFourthChoice;
     }
 
     public String getCorrectAnswer() {
-        return correctAnswer;
+        return mCorrectAnswer;
     }
 
     public void setCorrectAnswer(String newCorrectAnswer) {
-        correctAnswer = newCorrectAnswer;
+        mCorrectAnswer = newCorrectAnswer;
     }
 }

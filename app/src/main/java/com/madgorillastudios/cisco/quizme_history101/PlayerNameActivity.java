@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.madgorillastudios.cisco.quizme_history101.data.Constants;
+
 public class PlayerNameActivity extends AppCompatActivity {
     private static final String TAG = PlayerNameActivity.class.getName();
 
@@ -31,7 +33,7 @@ public class PlayerNameActivity extends AppCompatActivity {
             EditText etPlayerName = (EditText) findViewById(R.id.edit_text_player_name);
             if (!etPlayerName.getText().toString().isEmpty()) {
                 SharedPreferences.Editor editor = sharedPref.edit();
-                editor.putString("playerName", etPlayerName.getText().toString());
+                editor.putString(Constants.PLAYER_NAME_KEY, etPlayerName.getText().toString());
                 editor.commit();
 
                 Log.i(TAG, "playerName Commit Success! " + etPlayerName.getText().toString());
@@ -39,7 +41,7 @@ public class PlayerNameActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), QuizActivity.class);
                 startActivity(intent);
             } else {
-                Toast toast = Toast.makeText(getApplicationContext(), "Please enter your name", Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(getApplicationContext(), R.string.enter_player_name_warning, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
                 toast.show();
             }

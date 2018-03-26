@@ -2,12 +2,14 @@ package com.madgorillastudios.cisco.quizme_history101.data;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import java.util.ArrayList;
+import com.madgorillastudios.cisco.quizme_history101.R;
 
+import java.util.ArrayList;
 
 public class DbHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
@@ -23,8 +25,11 @@ public class DbHelper extends SQLiteOpenHelper {
 
     private SQLiteDatabase localDatabase;
 
+    private Context mContext;
+
     public DbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        mContext = context;
     }
 
     @Override
@@ -55,41 +60,15 @@ public class DbHelper extends SQLiteOpenHelper {
     }
 
     public void initializeDefaultQuestions() {
-        Question questionOne = new Question("Who fought in the war of 1812?",
-                "Andrew Jackson",
-                "Arthur Wellsley",
-                "Otto von Bismarck",
-                "Napoleon",
-                "Andrew Jackson");
+        Resources res = mContext.getResources();
+        String[] questionList = res.getStringArray(R.array.questions);
+        String[] choiceList = res.getStringArray(R.array.question_choices);
+        String[] answerKeyList = res.getStringArray(R.array.correct_answer_keys);
 
-        insertQuestion(questionOne);
-
-        Question questionTwo = new Question("Which general famously stated 'I shall return'?",
-                "Bull Halsey",
-                "George Patton",
-                "Douglas MacArthur",
-                "Omar Bradley",
-                "Douglas MacArthur");
-
-        insertQuestion(questionTwo);
-
-        Question questionThree = new Question("The first successful printing press was developed by this man",
-                "Johannes Gutenburg",
-                "Benjamin Franklin",
-                "Sir Isaac Newton",
-                "Martin Luther",
-                "Johannes Gutenburg");
-
-        insertQuestion(questionThree);
-
-        Question questionFour = new Question("Which Roman Emporer build a massive wall across Norther Britain in 122 AD?",
-                "Marcus Aurelius",
-                "Hadrian",
-                "Nero",
-                "Augustus",
-                "Hadrian");
-
-        insertQuestion(questionFour);
+        insertQuestion(new Question(questionList[0], choiceList[0], choiceList[1], choiceList[2], choiceList[3], answerKeyList[0]));
+        insertQuestion(new Question(questionList[1], choiceList[4], choiceList[5], choiceList[6], choiceList[7], answerKeyList[1]));
+        insertQuestion(new Question(questionList[2], choiceList[8], choiceList[9], choiceList[10], choiceList[11], answerKeyList[2]));
+        insertQuestion(new Question(questionList[3], choiceList[12], choiceList[13], choiceList[14], choiceList[15], answerKeyList[3]));
     }
 
     public void insertQuestion(Question newQuestion) {

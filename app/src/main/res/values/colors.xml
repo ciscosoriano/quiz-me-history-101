@@ -3,5 +3,13 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="colorText">#404040</color>
+
+    <color name="default_text_color">#404040</color>
+
+    <color name="default_button_color">#F2EC29</color>
+    <color name="default_button_stroke_color">#4D4D4D</color>
+    <color name="default_button_pressed_color">#CCF2EC29</color>
+
+    <color name="default_question_bg_color">#F2F2F2</color>
+    <color name="default_question_bg_stroke_color">#4D4D4D</color>
 </resources>

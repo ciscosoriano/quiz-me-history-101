@@ -21,27 +21,27 @@
 
         <TextView
             android:text="@string/main_title_quiz_me"
-            android:textSize="60sp"
+            android:textSize="@dimen/main_title_text_size"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center" />
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:gravity="center"/>
 
         <TextView
             android:text="@string/main_title_history_101"
-            android:textSize="30sp"
+            android:textSize="@dimen/sub_title_text_size"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center" />
+            android:gravity="center"/>
 
         <Button
             android:id="@+id/button_begin"
             android:text="@string/begin_label"
-            android:textSize="20sp"
+            android:textSize="@dimen/default_button_text_size"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="@dimen/default_margin_top"
             android:gravity="center"
-            android:background="@drawable/button_states" />
+            android:background="@drawable/button_states"/>
     </LinearLayout>
 </RelativeLayout>

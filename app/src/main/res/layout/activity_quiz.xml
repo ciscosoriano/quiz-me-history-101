@@ -3,20 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
+    android:padding="@dimen/default_padding"
     android:background="@drawable/sky_bg"
     tools:context=".QuizActivity">
 
     <TextView
         android:id="@+id/text_view_question"
-        android:textSize="30sp"
+        android:textSize="@dimen/default_text_size"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:layout_marginTop="20dp"
+        android:paddingTop="@dimen/default_padding_top"
+        android:paddingBottom="@dimen/default_padding_bottom"
+        android:paddingLeft="@dimen/default_padding_left"
+        android:paddingRight="@dimen/default_padding_right"
+        android:layout_marginTop="@dimen/default_margin_top"
         android:layout_alignParentTop="true"
         android:gravity="center"
         android:background="@drawable/question_bg"/>
@@ -25,54 +25,54 @@
         android:id="@+id/radio_group_choices"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:layout_marginTop="80dp"
+        android:padding="@dimen/choices_radio_group_padding"
+        android:layout_marginTop="@dimen/choices_radio_group_margin_top"
         android:layout_below="@id/text_view_question"
         android:orientation="vertical"
         android:background="@drawable/question_bg">
 
         <RadioButton
             android:id="@+id/radio_button_first_choice"
-            android:textSize="20sp"
-            android:textColor="@color/colorText"
+            android:textSize="@dimen/default_text_size"
+            android:textColor="@color/default_text_color"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="@dimen/default_margin_top"/>
 
         <RadioButton
             android:id="@+id/radio_button_second_choice"
-            android:textSize="20sp"
-            android:textColor="@color/colorText"
+            android:textSize="@dimen/default_text_size"
+            android:textColor="@color/default_text_color"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="@dimen/default_margin_top"/>
 
         <RadioButton
             android:id="@+id/radio_button_third_choice"
-            android:textSize="20sp"
-            android:textColor="@color/colorText"
+            android:textSize="@dimen/default_text_size"
+            android:textColor="@color/default_text_color"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="@dimen/default_margin_top"/>
 
         <RadioButton
             android:id="@+id/radio_button_fourth_choice"
-            android:textSize="20sp"
-            android:textColor="@color/colorText"
+            android:textSize="@dimen/default_text_size"
+            android:textColor="@color/default_text_color"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:layout_marginBottom="@dimen/default_margin_bottom"/>
     </RadioGroup>
 
     <Button
         android:id="@+id/button_next_question"
         android:text="@string/next_question_label"
-        android:textSize="20sp"
+        android:textSize="@dimen/default_button_text_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="@dimen/default_margin_bottom"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:background="@drawable/button_states" />
+        android:background="@drawable/button_states"/>
 </RelativeLayout>

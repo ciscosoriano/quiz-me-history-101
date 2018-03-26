@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.madgorillastudios.cisco.quizme_history101.data.Constants;
 import com.madgorillastudios.cisco.quizme_history101.data.DbHelper;
 
 public class ResultActivity extends AppCompatActivity {
@@ -28,16 +29,15 @@ public class ResultActivity extends AppCompatActivity {
 
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
-        String playerName = sharedPref.getString("playerName", "Player");
+        String playerName = sharedPref.getString(Constants.PLAYER_NAME_KEY, Constants.PLAYER_NAME_DEFAULT_VALUE);
 
         TextView tvFinalScoreHeading = (TextView) findViewById(R.id.text_view_score_heading);
         tvFinalScoreHeading.setText("Your Score " + playerName + "!");
 
-        String quizScore = sharedPref.getString("quizScore", "0");
+        String quizScore = sharedPref.getString(Constants.QUIZ_SCORE_KEY, Constants.QUIZ_SCORE_DEFAULT_VALUE);
 
         RatingBar rbFinalScoreRate = (RatingBar) findViewById(R.id.rating_bar_score);
         rbFinalScoreRate.setRating(Integer.valueOf(quizScore));
-
 
         TextView tvFinalScore = (TextView) findViewById(R.id.text_view_final_score);
         tvFinalScore.setText(quizScore + "/" + String.valueOf(questionsDbCount));
